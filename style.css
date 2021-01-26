@@ -44,6 +44,7 @@ p {
 
 .box {
   border: 1px solid #dedede;
+  /* span; inline by default. Making inline-block so can have margin and padding */
   display: inline-block;
   font-size: 30px;
   margin: 20px;
