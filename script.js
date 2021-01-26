@@ -64,3 +64,6 @@ function getRandomNumber() {
 
 // Speak result
 recognition.addEventListener('result', onSpeak);
+
+// End speech recognition service
+recognition.addEventListener('end', () => recognition.start());
