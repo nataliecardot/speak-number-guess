@@ -1,6 +1,6 @@
 # Speak Number Guessing Game
 
-Vanilla JS number guessing game where you speak your guess into the microphone using the speech recognition API.
+Vanilla JS number guessing game where you speak your guess into the microphone using the [SpeechRecognition interface](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) of the Web Speech API.
 
 ## Project Specifications
 
