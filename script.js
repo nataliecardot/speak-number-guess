@@ -47,7 +47,7 @@ function checkNumber(msg) {
   // Check if number matches
   if (num === randomNum) {
     document.body.innerHTML = `
-      <h1 class="h2">You've guessed the correct number! You're basically a genius.</h1><br><br><p>The number was: ${randomNum}</p>
+      <h1 class="h2">You've guessed the correct number!</h1><br><br><p>The number was: ${randomNum}</p>
       <button class="play-again" id="play-again">Play Again</button>
     `;
   } else if (num > randomNum) {
