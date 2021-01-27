@@ -34,7 +34,7 @@ function checkNumber(msg) {
 
   // Check if valid number
   if (Number.isNaN(num)) {
-    msgEl.innerHTML = "<div><p>That's not a valid number</p></div>";
+    msgEl.innerHTML += "<div><p>That's not a valid number</p></div>";
     return;
   }
 
@@ -44,10 +44,10 @@ function checkNumber(msg) {
     return;
   }
 
-  // Check number
+  // Check if number matches
   if (num === randomNum) {
     document.body.innerHTML = `
-      <h1 class="h2">Congrats! You've guessed the correct number!</h1><br><br><p>The number was: ${randomNum}</p>
+      <h1 class="h2">You've guessed the correct number! You're basically a genius.</h1><br><br><p>The number was: ${randomNum}</p>
       <button class="play-again" id="play-again">Play Again</button>
     `;
   } else if (num > randomNum) {
@@ -65,5 +65,12 @@ function getRandomNumber() {
 // Speak result
 recognition.addEventListener('result', onSpeak);
 
-// End speech recognition service
+// End speech recognition service -> start listening again
 recognition.addEventListener('end', () => recognition.start());
+
+// Adding event listener to parent since generated after DOM is already created
+document.body.addEventListener('click', (e) => {
+  if (e.target.id === 'play-again') {
+    window.location.reload();
+  }
+});
